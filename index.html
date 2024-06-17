@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>John Ta - Under Construction</title>
+  <title>Affil.ai</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,6 +27,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <style>
     body, html {
       height: 100%;
@@ -48,14 +50,28 @@
       font-size: 1.5em;
       font-weight: 300;
     }
+    @tailwind base;
+	  @tailwind components;
+	  @tailwind utilities;
+
+  	@layer components {
+  		.badge {
+  			@apply flex items-center gap-1 bg-slate-200 bg-opacity-40 w-fit px-4 py-[0.1rem] rounded-full justify-center animate-slidein opacity-0;
+  		}
+  		.logo {
+  			@apply inline rounded-sm object-cover w-4;
+  		}
+  	}
   </style>
 </head>
 
 <body>
   <div class="construction-container">
-    <h1>John Ta</h1>
-    <p>This website is currently under construction.</p>
-    <p>Please check back later.</p>
+    <h1>Affil.ai</h1>
+    <p class="badge opacity-0 [--slidein-delay:300ms]">
+				Backed by <svg height="18" viewBox="4 4 188 188" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m4 4h188v188h-188z" fill="#f60"/><path d="m73.2521756 45.01 22.7478244 47.39130083 22.7478244-47.39130083h19.56569631l-34.32352071 64.48661468v41.49338532h-15.98v-41.49338532l-34.32352071-64.48661468z" fill="#fff"/></svg>
+				<span class="text-[#E96F37]">Combinator</span>
+		</p>
   </div>
 </body>
 
